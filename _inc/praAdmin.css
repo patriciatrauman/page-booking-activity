@@ -1,0 +1,36 @@
+fieldset {
+  min-width: 100px;
+  display: inline-block;
+}
+
+fieldset input {
+  float: right;
+}
+
+fieldset textarea {
+  float: right;
+}
+
+fieldset select {
+  float: right;
+}
+
+table {
+  width: 100%;
+  border: 4px solid gray;
+  padding: 2px;
+}
+
+thead {
+  background-color: gray;
+}
+
+td {
+  padding: 2px;
+}
+
+th {
+  padding: 0 2px 5px;
+  line-height: 15px;
+  text-align: left;
+}
