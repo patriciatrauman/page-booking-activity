@@ -23,7 +23,7 @@ class Pra_Admin
   {
     $hook = add_pages_page(
       __('PRA', PRA_PREFIX_PLUGIN), //page_title
-      __('Resa Activite', PRA_PREFIX_PLUGIN), //menu_title
+      __('Booking Activity', PRA_PREFIX_PLUGIN), //menu_title
       'manage_options', //capability
       PRA_PREFIX_PLUGIN . '-key-config', //menu_slug
       array('Pra_Admin', 'display_page') //function ??
