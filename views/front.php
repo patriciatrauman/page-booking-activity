@@ -1,7 +1,3 @@
-<?php
-/*Bloc présentation de l'évenement*/
-
-?>
 <p>
 <div contenteditable="<?= $isUserAdmin ? 'true' : 'false' ?>" data-id-event=<?= $event->id ?> data-action='textPres' id='textPresDiv'><?= stripslashes($event->description) ?></div>
 <form id="textPresForm" action="<?= home_url($rq) ?>" method="post" style="display: none;">
@@ -13,21 +9,12 @@
 <?php
 if ($isUserAdmin) {
 ?>
-  <!--span class="material-icons" data-id-event=<?= $event->id ?> data-action='editPres'>edit</span-->
   <span class="material-icons cursorPointer savePres" data-id-event=<?= $event->id ?> data-action='savePres'>save</span>
 <?php
 }
 ?>
 </p>
 
-<?php
-/*Liste des dates bookable
- * - Possibilité de booker pour tout utilisateur s'il reste de la place
- * - Pour les admins
- *  - Possibilité de voir qui est inscrit
- *  - Possibilité d'ajouter/modifier/supprimer des dates
- */
-?>
 <?php
 if ($isUserAdmin) {
 ?>
@@ -39,7 +26,6 @@ if ($isUserAdmin) {
   <div id="addDates" style="display:none">
 
     <form id="addDateForm" action="<?= home_url($rq) ?>" method="post">
-      <!--fieldset class="addAddDate"><span class="material-icons cursorPointer addAnotherDate"  data-action='addAnotherDate'>add_circle</span></fieldset-->
       <fieldset class="formAddDate">
         <label for="formAddDate_dateCal">Date</label>
         <input type="date" id="formAddDate_dateCal" name="dateCal" min="<?= date('Y-m-d') ?>">
@@ -99,7 +85,6 @@ if ($isUserAdmin) {
         if (!($nbPersonneBooked == $cal->nbPersonne && $isBooked == false)) {
         ?>
           <input type="checkbox" name="booking[<?= $cal->id ?>]" data-id-day='<?= $cal->id ?>' <?= $isBooked ? 'checked' : '' ?>>
-          <!-- <input type="hidden" name="calId[]" data-id-day='<?= $cal->id ?>' value<?= $cal->id ?>> -->
         <?php
         } else {
         ?>

@@ -37,7 +37,6 @@ add_action('admin_enqueue_scripts', 'load_general_sources');
 function load_general_sources()
 {
 	wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css2?family=Material+Icons:ital,wght@0,300;0,400;0,700;1,400&family=Neuton:ital,wght@0,300;0,400;0,700;1,400&display=swap', [], null);
-	// wp_register_style(PRA_PREFIX_PLUGIN . '.css', plugin_dir_url(__FILE__) . '_inc/' . PRA_PREFIX_PLUGIN . '.css', array(), PRA_VERSION);
 	wp_register_style(PRA_PREFIX_PLUGIN . '.css', plugin_dir_url(__FILE__) . '_inc/' . PRA_PREFIX_PLUGIN . '.css');
 	wp_enqueue_style(PRA_PREFIX_PLUGIN . '.css');
 }

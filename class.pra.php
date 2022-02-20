@@ -20,15 +20,7 @@ class Pra
    */
   public static function plugin_activation()
   {
-    // if (version_compare($GLOBALS['wp_version'], BRE_MINIMUM_WP_VERSION, '<')) {
-    //   load_plugin_textdomain('BRE');
-    //   //todo changer l'url en fin de ligne pour pointer sur un github
-    //   $message = '<strong>' . sprintf(esc_html__('Booking Redundant Event %s requires WordPress %s or higher.', 'booking_redundant_event'), BRE_VERSION, BRE_MINIMUM_WP_VERSION) . '</strong> ' . sprintf(__('Please <a href="%1$s">upgrade WordPress</a> to a current version, or <a href="%2$s">downgrade to version 2.4 of the Akismet plugin</a>.', 'booking_redundant_event'), 'https://codex.wordpress.org/Upgrading_WordPress', 'https://wordpress.org/extend/plugins/akismet/download/');
-
-    //   bre::bail_on_activation($message);
-    // } else
     if (!empty($_SERVER['SCRIPT_NAME']) && false !== strpos($_SERVER['SCRIPT_NAME'], '/wp-admin/plugins.php')) {
-      //call to create table event & table booking
       self::_create_tables_on_activation();
     }
   }

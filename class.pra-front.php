@@ -33,7 +33,6 @@ class Pra_Front
       isset($_POST)
       && isset($_POST['idEvent'])
       && isset($_POST['booking'])
-      // && isset($_POST['calId'])
     ) {
       $warning = self::save_booking();
     }
@@ -72,10 +71,6 @@ class Pra_Front
   }
   public static function load_resources()
   {
-    // wp_register_style(PRA_PREFIX_PLUGIN . '.css', plugin_dir_url(__FILE__) . '_inc/' . PRA_PREFIX_PLUGIN . '.css', array(), PRA_VERSION);
-    // wp_enqueue_style(PRA_PREFIX_PLUGIN . '.css');
-    // wp_register_style(PRA_PREFIX_PLUGIN . 'Front.css', plugin_dir_url(__FILE__) . '_inc/' . PRA_PREFIX_PLUGIN . 'Front.css', array(), PRA_VERSION);
-    // wp_enqueue_style(PRA_PREFIX_PLUGIN . 'Front.css');
     wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css2?family=Material+Icons:ital,wght@0,300;0,400;0,700;1,400&family=Neuton:ital,wght@0,300;0,400;0,700;1,400&display=swap', [], null);
 
     wp_register_script(PRA_PREFIX_PLUGIN . 'Front.js', plugin_dir_url(__FILE__) . '_inc/' . PRA_PREFIX_PLUGIN . 'Front.js');

@@ -17,7 +17,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
         let details = document.getElementById('pra_detailForm');
         details.children[0].textContent = 'Formulaire de modification';
         details.open = true;
-        //todo move form to Edit et feed it
         document.getElementById('activityName').value = this.dataset.name;
         document.getElementById('activityId').value = this.dataset.activityId;
         document.getElementById('activityDesc').value = this.dataset.activityDesc;
@@ -29,8 +28,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
             option.selected = 'selected';
           }
         })
-        // document.getElementById('activityAdmin').getElementsByTagName('option').forEach(option => {
-        // })
         console.log("details", details)
         console.log('this.dataset', this.dataset)
       })
