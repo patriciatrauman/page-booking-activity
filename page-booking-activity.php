@@ -11,9 +11,9 @@
  * Version:           1.0
  * Requires at least: 5.9
  * Author:            Patricia Trauman
- * Author URI:        http://faitparpatricia.fr/
+ * Author URI:        https://github.com/patriciatrauman/page-booking-activity
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
- * Update URI:        https://example.com/my-plugin/
+ * Update URI:        https://github.com/patriciatrauman/page-booking-activity/
  */
 
 if (!function_exists('add_action')) {
